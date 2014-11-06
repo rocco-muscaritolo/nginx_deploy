@@ -2,6 +2,7 @@
 
 # NGINX VARS
 'domain': 'example.com'
+'nginx_vhost_path': '/etc/nginx/conf.d'
 
 
 # PHP-FPM VARS
