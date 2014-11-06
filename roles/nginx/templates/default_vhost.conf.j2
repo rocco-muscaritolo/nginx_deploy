@@ -1,0 +1,39 @@
+server {
+ 
+    listen   80; 
+ 
+    server_name  {{ domain }};
+{% if domain != 'example.com' %}
+        root /var/www/vhosts/{{ domain }};
+{% else %}
+        root /var/www;
+{% endif %}
+
+    #server_name www.{{ domain }};
+    #rewrite ^ http://{{ domain }}$request_uri? permanent;
+
+    access_log  /var/log/nginx/{{ domain }}_access.log;
+    error_log   /var/log/nginx/{{ domain }}_error.log error;
+ 
+    location / {
+        index  index.php index.html index.htm;
+        try_files $uri $uri/ /index.php?q=$uri&args;
+ 
+    }
+ 
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_pass   php5-fpm-sock;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+ 
+ 
+    #Set Headers on Images and other Static Assets
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires 1y;
+    log_not_found off;
+    }
+ 
+}

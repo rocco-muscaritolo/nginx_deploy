@@ -1,0 +1,8 @@
+---
+
+# NGINX VARS
+'domain': 'example.com'
+
+
+# PHP-FPM VARS
+
