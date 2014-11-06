@@ -1,7 +1,8 @@
 ---
 
 # NGINX VARS
-'repo_file': 'Debian.list'
+'nginx_user': 'www-data'
+'repo_file': 'Debian.list.j2'
 'repo_dest': '/etc/apt/sources.list.d/nginx.list'
 
 

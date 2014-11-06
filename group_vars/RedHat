@@ -1,7 +1,8 @@
 ---
 
 # NGINX VARS
-'repo_file': 'RedHat.repo'
+'nginx_user': 'nginx'
+'repo_file': 'RedHat.repo.j2'
 'repo_dest': '/etc/yum.repos.d/nginx.repo'
 
 
