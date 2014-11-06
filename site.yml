@@ -27,7 +27,7 @@
 
   roles:
     - { role: nginx, tags: nginx }
-    - { role: php-fpm, tags: php-fpm }
+#    - { role: php-fpm, tags: php-fpm }
 
 
 # Applies only to Debian systems
@@ -43,5 +43,5 @@
 
   roles:
     - { role: nginx, tags: nginx }
-    - { role: php-fpm, tags: php-fpm }
+#    - { role: php-fpm, tags: php-fpm }
 

@@ -6,9 +6,11 @@
 
 - name: Installing nginx packages - RedHat
   yum: name="nginx" state=present
+  when: ansible_os_family == 'RedHat'
 
 - name: Installing nginx packages - Debian
   apt: name="nginx" state=present
+  when: ansible_distribution == "Debian"
 
 
 
