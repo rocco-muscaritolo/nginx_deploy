@@ -1,0 +1,10 @@
+---
+
+# NGINX VARS
+'repo_file': 'RedHat.repo'
+'repo_dest': '/etc/yum.repos.d/nginx.repo'
+
+
+
+# PHP-FPM VARS
+

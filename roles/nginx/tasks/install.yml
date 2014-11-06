@@ -1,0 +1,14 @@
+---
+
+- name: Add offical Nginx repos
+  template: src={{ repo_file }} dest={{ repo_dest }}
+
+
+- name: Installing nginx packages - RedHat
+  yum: name="nginx" state=present
+
+- name: Installing nginx packages - Debian
+  apt: name="nginx" state=present
+
+
+

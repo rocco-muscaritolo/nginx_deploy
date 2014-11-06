@@ -1,0 +1,10 @@
+---
+
+# NGINX VARS
+'repo_file': 'Debian.list'
+'repo_dest': '/etc/apt/sources.list.d/nginx.list'
+
+
+
+# PHP-FPM VARS
+
